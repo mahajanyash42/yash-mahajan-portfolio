@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight, Github, Linkedin, Mail, MapPin, Sparkles } from "lucide-react";
 import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
 import ProjectCard from "@/components/ProjectCard";
+import AIWorkspace from "@/components/AIWorkspace";
 import { experiences, projects, siteConfig, skillGroups } from "@/data/site";
 
 export default function Home() {
@@ -24,12 +24,7 @@ export default function Home() {
           <div className="hero-meta"><span><MapPin size={15}/>{siteConfig.location}</span><span>MSIS @ UMD</span></div>
         </Reveal>
         <Reveal delay={.15} className="hero-visual">
-          <div className="portrait-wrap">
-            <div className="portrait-glow"/>
-            <div className="portrait">
-              <Image src="/yash-hero-blazer-final.png" alt="Yash Mahajan" width={520} height={520} priority />
-            </div>
-          </div>
+          <AIWorkspace />
         </Reveal>
         <div className="hero-stats">
           <div><strong>5</strong><span>Professional Experiences</span></div>
