@@ -43,7 +43,7 @@ export default function Home() {
         <Reveal><p className="section-label">01 · About</p><h2>I like building systems that are useful, explainable, and grounded in real data.</h2></Reveal>
         <div className="about-grid">
           <Reveal delay={.05}><p className="lead">I am a Data Scientist and AI Engineer from Mumbai, pursuing an M.S. in Information Systems at the University of Maryland.</p></Reveal>
-          <Reveal delay={.12}><div className="about-copy"><p>My work spans agentic AI, machine learning, data engineering, software development, cloud infrastructure, and intelligent automation. I am especially interested in systems that combine language models with structured databases, vector search, knowledge graphs, APIs, and validation layers.</p><p>Outside technology, I am usually following football, supporting Real Madrid and Cristiano Ronaldo, working out, or exploring new places.</p></div></Reveal>
+          <Reveal delay={.12}><div className="about-copy"><p>My work spans agentic AI, machine learning, data engineering, software development, cloud infrastructure, and intelligent automation. I am especially interested in systems that combine language models with structured databases, vector search, knowledge graphs, APIs, and validation layers.</p><p>Outside technology, I am usually following football and cricket, supporting Real Madrid and Team India, working out, or exploring new places to eat.</p></div></Reveal>
         </div>
       </section>
 
