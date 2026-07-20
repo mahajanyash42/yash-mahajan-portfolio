@@ -2,12 +2,12 @@ export const siteConfig = {
   name: "Yash Mahajan",
   title: "Data Scientist & AI/ML Engineer",
   description:
-    "I build intelligent systems, data products, and reliable AI applications that connect language models with databases, APIs, knowledge graphs, and real-world workflows.",
+    "I build data products, analytical solutions, and intelligent systems that turn complex information into reliable business decisions.",
   location: "College Park, Maryland",
   github: "https://github.com/mahajanyash42",
   linkedin: "https://www.linkedin.com/in/yashhmahajan/",
   email: "yashm1@umd.edu",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/Yash_Mahajan_AI_Resume.pdf",
 };
 
 export type Project = {
@@ -18,6 +18,7 @@ export type Project = {
   impact: string;
   stack: string[];
   github: string;
+  demo?: string;
   featured: boolean;
   challenge: string;
   solution: string;
@@ -63,6 +64,7 @@ export const projects: Project[] = [
     impact: "90% overall hybrid-agent accuracy",
     stack: ["LangGraph", "Neo4j", "Graph-RAG", "Text-to-Cypher", "Vector Search", "Python"],
     github: "https://github.com/mahajanyash42/supplygraph-rag",
+    demo: "https://supplygraph.yashmahajan.com/",
     featured: true,
     challenge:
       "Vector search can retrieve narrative incident details, but it cannot reliably walk multi-tier relationships such as Event → Facility → Supplier → Component → Product.",

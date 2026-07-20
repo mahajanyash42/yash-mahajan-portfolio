@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight, Github, Globe } from "lucide-react";
 import type { Project } from "@/data/site";
 export default function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
     <article className="project-card">
       <div className="project-number">0{index + 1}</div>
+      {project.demo && <span className="live-badge"><span/> Live</span>}
       <p className="eyebrow">{project.eyebrow}</p>
       <h3>{project.title}</h3>
       <p>{project.summary}</p>
@@ -12,7 +13,10 @@ export default function ProjectCard({ project, index }: { project: Project; inde
       <div className="chips">{project.stack.slice(0,5).map(s => <span key={s}>{s}</span>)}</div>
       <div className="project-actions">
         <Link href={`/projects/${project.slug}`}>Case study <ArrowUpRight size={16}/></Link>
-        <a href={project.github} target="_blank" rel="noreferrer" aria-label={`${project.title} on GitHub`}><Github size={18}/></a>
+        <div className="project-actions-links">
+          {project.demo && <a className="btn-demo" href={project.demo} target="_blank" rel="noreferrer">Live demo <Globe size={15}/></a>}
+          <a href={project.github} target="_blank" rel="noreferrer" aria-label={`${project.title} on GitHub`}><Github size={18}/></a>
+        </div>
       </div>
     </article>
   )

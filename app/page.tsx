@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowDown, ArrowUpRight, Github, Linkedin, Mail, MapPin, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowUpRight, FileText, Github, Linkedin, Mail, MapPin, Sparkles } from "lucide-react";
 import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
 import ProjectCard from "@/components/ProjectCard";
@@ -19,9 +19,10 @@ export default function Home() {
           <p className="hero-description">{siteConfig.description}</p>
           <div className="hero-actions">
             <a className="btn btn-primary" href="#projects">Explore my work <ArrowDown size={17}/></a>
+            <a className="btn btn-ghost" href={siteConfig.resumeUrl} target="_blank" rel="noreferrer"><FileText size={18}/> Resume</a>
             <a className="btn btn-ghost" href={siteConfig.github} target="_blank" rel="noreferrer"><Github size={18}/> GitHub</a>
           </div>
-          <div className="hero-meta"><span><MapPin size={15}/>{siteConfig.location}</span><span>MSIS @ UMD</span></div>
+          <div className="hero-meta"><span><MapPin size={15}/>{siteConfig.location}</span><span>MSIS & AI @ UMD</span></div>
         </Reveal>
         <Reveal delay={.15} className="hero-visual">
           <AIWorkspace />
@@ -37,7 +38,7 @@ export default function Home() {
       <section id="about" className="section section-shell about">
         <Reveal><p className="section-label">01 · About</p><h2>I like building systems that are useful, explainable, and grounded in real data.</h2></Reveal>
         <div className="about-grid">
-          <Reveal delay={.05}><p className="lead">I am a Data Scientist and AI Engineer from Mumbai, pursuing an M.S. in Information Systems at the University of Maryland.</p></Reveal>
+          <Reveal delay={.05}><p className="lead">I am a Data Scientist and AI Engineer pursuing an M.S. in Information Systems and Artificial Intelligence at the University of Maryland.</p></Reveal>
           <Reveal delay={.12}><div className="about-copy"><p>My work spans agentic AI, machine learning, data engineering, software development, cloud infrastructure, and intelligent automation. I am especially interested in systems that combine language models with structured databases, vector search, knowledge graphs, APIs, and validation layers.</p><p>Outside technology, I am usually following football and cricket, supporting Real Madrid and Team India, working out, or exploring new places to eat.</p></div></Reveal>
         </div>
       </section>
@@ -60,7 +61,7 @@ export default function Home() {
       </section>
 
       <section id="contact" className="section section-shell contact">
-        <Reveal className="contact-card"><p className="section-label">05 · Contact</p><h2>Have a data problem, an AI product idea, or a role where we can build something meaningful?</h2><p>Let’s connect. I’m currently exploring full-time opportunities in Data Science, AI/ML Engineering, Applied AI, and Data Engineering.</p><div className="contact-actions"><a className="btn btn-primary" href={siteConfig.linkedin} target="_blank" rel="noreferrer"><Linkedin size={18}/> Connect on LinkedIn</a><a className="btn btn-ghost" href={siteConfig.github} target="_blank" rel="noreferrer"><Github size={18}/> Explore GitHub</a><a className="btn btn-ghost" href={`mailto:${siteConfig.email}`}><Mail size={18}/> Email Me</a></div></Reveal>
+        <Reveal className="contact-card"><p className="section-label">05 · Contact</p><h2>Have a data problem, an AI product idea, or a role where we can build something meaningful?</h2><p>Let’s connect. I’m currently exploring full-time opportunities in Data Science, AI/ML Engineering, Applied AI, and Data Engineering.</p><div className="contact-actions"><a className="btn btn-primary" href={siteConfig.linkedin} target="_blank" rel="noreferrer"><Linkedin size={18}/> Connect on LinkedIn</a><a className="btn btn-ghost" href={siteConfig.github} target="_blank" rel="noreferrer"><Github size={18}/> Explore GitHub</a><a className="btn btn-ghost" href={siteConfig.resumeUrl} target="_blank" rel="noreferrer"><FileText size={18}/> Resume</a><a className="btn btn-ghost" href={`mailto:${siteConfig.email}`}><Mail size={18}/> Email Me</a></div></Reveal>
       </section>
 
       <footer className="footer section-shell"><span>© 2026 Yash Mahajan</span><span>Built with Next.js · Designed with intention</span></footer>
